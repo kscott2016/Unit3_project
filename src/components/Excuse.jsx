@@ -13,8 +13,8 @@ const Excuse = ({displayExcuse}) => {
       try{
       
       const response = await axios.get(`${BASE_URL}`)
-      console.log(response.data[0])
-      setExcuse(response.data[0].excuse)
+      console.log(response.data)
+      setExcuse(response.data.Excuse)
       }catch (err){
           console.log(err);
       }

@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://excuser.herokuapp.com/v1/excuse'
+export const BASE_URL = 'https://api.lazydesignerexcuses.com/random'
 
 //export const POSTER_PATH = 'https://image.tmdb.org/t/p/original'
 

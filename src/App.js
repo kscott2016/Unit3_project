@@ -4,6 +4,8 @@ import axios from 'axios'
 import { BASE_URL, API_KEY } from './globals'
 import Excuse from './components/Excuse'
 
+
+
 {var excuseCategories = [
   "family",
   "office",
@@ -30,10 +32,10 @@ const App = () => {
       <div className="instructions-group">
         <div className="instructions-text">
         <header><h1>Excuses Generator</h1></header>
-        <h3>Need an excuse? Click on the button for an idea on how to further delay your responsibilities.</h3>
+        <h3>You want to be a lazy programmer? Need an excuse for work? Click on the button for an excuse!</h3>
         <div className="theButton">
 
-        <form >
+        {/* <form >
         <label>
           Select the type of excuse you would like
           <select name="excuseSelect" id="excuseSelect" onChange={toggleExcuses}>
@@ -44,11 +46,11 @@ const App = () => {
             <option value="party">Party</option>
           </select>
         </label>
-      </form>
+      </form> */}
 
 
 
-        {/* { <button onClick={toggleExcuses}>Escape Accountability!</button> } */}
+        <button onClick={toggleExcuses}>Escape Accountability!</button> 
         </div>
         </div>
         <div className="image-container">
