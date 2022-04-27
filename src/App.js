@@ -99,7 +99,7 @@ const App = () => {
               <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button>
 
               {tagList == true} ? (
-              <FilteredExcuseList setTag = {tag} allExcuses={excuses} />)
+              {/* <FilteredExcuseList setTag = {tag} allExcuses={excuses} />) */}
             </div>
 
           )}
