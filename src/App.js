@@ -8,7 +8,7 @@ import ExcuseList from './components/ExcuseList'
 const App = () => {
 
   const [excuses , setExcuses] = useState([]) 
-  const [tag, setTag] = useState(null)
+  const [tag, setTag] = useState(false)
 
 
   const handleSelect=(e)=>{
@@ -17,11 +17,20 @@ const App = () => {
     
   }
 
+  const toggleList = () => {
+    {tag ? (
+      setTag(false)
+      ) : (
+        setTag(true)
+      )
+    }
+  }
+
   useEffect(() => {
     const getExcuses = async () => {
       const response = await axios.get(`${ALL_EXCUSES_URL}`)
       console.log(response.data)
-      setExcuses(response.data.Excuse)
+      setExcuses(response.data)
     }
     getExcuses()
   }, [])
@@ -56,7 +65,7 @@ const App = () => {
           </select>
         </label>
       </form> 
-        {/* <button onClick={<ExcuseList tag ={tag}/>}>See an entire list of excuses to get that manager off your back!</button> */}
+        <button onClick={toggleList}>See an entire list of excuses to get that manager off your back!</button>
         </div>
         </div>
         <div className="image-container">
@@ -64,16 +73,19 @@ const App = () => {
         </div>
         </div>
         <div className="quote-container">
-          
-          
-         
-          {/* <h3>You've selected {tag} </h3> */}
+    
           {/* <Excuse setTag = {tag}/> */}
-          {setTag ? (
-            <Excuse setTag = {tag}/>
-          ) : (
-
+          {tag === false ? (
+            <div>
+             <h3> FALSE </h3>
             <ExcuseList allExcuses = {excuses} />
+            </div>
+          ) : (
+            <div>
+              <h3> {`You've selected ${tag} type of an excuse`} </h3>
+            <Excuse setTag = {tag}/>
+            
+            </div>
             
           )}
   
