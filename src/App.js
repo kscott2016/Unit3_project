@@ -84,11 +84,7 @@ const App = () => {
         </div>
         </div>
         <div >
-    
-      
 
-
-         
           {tag === false ? (
             <div>
              <h2 className='excuse-list-header'> Here's a handy list of excuses to escape accountability! </h2>
