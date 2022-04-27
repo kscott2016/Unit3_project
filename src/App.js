@@ -42,8 +42,8 @@ const App = () => {
       <div className="instructions-group">
         <div className="instructions-text">
         <header><h1>Excuses Generator</h1></header>
-        <p>Work got you down? Don't feel like going to that meeting or you've been procrastinating on an assignment? Checkk out the list below of excuses!</p>
-        <p>Interested in a certain type of excuse? Select an excuse type from the menu</p>
+        <p>Design work got you down? Don't feel like going to that meeting or you've been procrastinating on an assignment? Check out the list below of excuses!</p>
+        <p>Interested in a certain type of excuse? Select an excuse type and a excuse of that type will appear.</p>
         <div className="theButton">
 
         <form className='excuseTypeMenu' >

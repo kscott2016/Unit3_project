@@ -54,13 +54,17 @@ button:active {
 }
 
 .image-container {
-  background-image: url('https://i.imgur.com/TJq8f1i.gif');
-  background-size: cover;
-  width: 50em;
+  background-image: url('https://c.tenor.com/ar7qPZb-zC4AAAAC/desperate-client.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 70em;
   height: 20em;
   
 }
 
+ div.instructions-group > div.instructions-text > p{
+  line-height: 30px;
+}
 
 
 .grid {
@@ -78,7 +82,7 @@ button:active {
   text-align: center;
   justify-content: center;
   padding: 15px 30px;
-  background-color: #a3eaf9;
+  background-color: #d8f9ff;
 }
 
 h2.excuse-list-header{
