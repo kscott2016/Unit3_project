@@ -39,6 +39,7 @@ button {
   color: white;
   border-radius: 0.25em;
   box-shadow: 0 0 0.25em black;
+  margin: 30px auto 20px auto;
 }
 
 button:active {
@@ -60,16 +61,7 @@ button:active {
   
 }
 
-.quote-container {
-  
-  padding: 2em 4em;
-  background-color: #7f4444;
-  border:2px solid #000;
-  display: block;
-  margin: 50px auto;
-  justify-content: center;
-  text-shadow: 0 0 0.5em rgba(0, 151, 88, 0.253);
-}
+
 
 .grid {
   display: grid;
@@ -99,6 +91,29 @@ form.excuseTypeMenu{
 
 #excuseSelect{
   padding: 10px 20px;
+}
+
+
+.excuseText{
+  font-style: italic;
+  font-weight: 600;
+}
+
+.excuseType, .excuseType span{
+  font-weight: 800;
+  color:rgb(31, 112, 69);
+}
+
+div.content-container{
+   
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:20px 50px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    max-width: 600px;
+    margin: auto;
 }
 
 select{

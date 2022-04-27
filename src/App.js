@@ -82,10 +82,10 @@ const App = () => {
             <ExcuseList allExcuses = {excuses} />
             </div>
           ) : (
-            <div>
-              <h3> {`You've selected ${tag} type of an excuse`} </h3>
+            <div className='content-container'>
+              <h3 className='excuseType'> <u>{`You've selected a ${tag} type of excuse`}</u> </h3>
             <Excuse setTag = {tag}/>
-            <button onClick={toggleList}>Click here to see the entire list</button>
+            <button onClick={toggleList}>Click here to see the entire list of excuses</button>
             
             </div>
             

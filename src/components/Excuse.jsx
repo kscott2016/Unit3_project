@@ -24,7 +24,7 @@ const Excuse = (props) => {
   
 
     return(
-      <h2>{excuse}</h2>
+      <h3 className="excuseText">{excuse}</h3>
     )
   }
 
