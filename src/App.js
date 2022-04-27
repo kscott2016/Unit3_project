@@ -91,7 +91,6 @@ const App = () => {
               <ExcuseList allExcuses={excuses} />
             </div>
           ) : (
-
             <div className='content-container'>
               <h3 className='excuseType'> <u>{`You've selected a ${tag} type of excuse`}</u> </h3>
               <Excuse setTag={tag} />
@@ -101,13 +100,9 @@ const App = () => {
               {tagList == true} ? (
               {/* <FilteredExcuseList setTag = {tag} allExcuses={excuses} />) */}
             </div>
-
           )}
 
         </div>
-
-
-
       </main>
     </div>
   )
