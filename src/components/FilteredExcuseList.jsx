@@ -2,14 +2,14 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import { BASE_URL, ALL_EXCUSES_URL } from '../globals'
 
-const ExcuseList = (props) => {
+const FilteredExcuseList = (props) => {
 
       return(
 
 
         <div className="grid">
             {
-                props.allExcuses.map((excuse) => (
+                props.allExcuses.map((excuse) =>  (
 
                     <div key={excuse.id} className="card">
                         <p className="excuseText">{excuse.Excuse}</p>
@@ -25,4 +25,4 @@ const ExcuseList = (props) => {
         )
   }
   
-  export default ExcuseList
+  export default FilteredExcuseList

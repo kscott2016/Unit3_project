@@ -14,9 +14,7 @@ const App = () => {
 
 
   const handleSelect = (e) => {
-    //console.log(e.target.value);
     if (e.target.value) setTag(e.target.value)
-
   }
 
   const toggleList = () => {
@@ -98,9 +96,10 @@ const App = () => {
               <h3 className='excuseType'> <u>{`You've selected a ${tag} type of excuse`}</u> </h3>
               <Excuse setTag={tag} />
               <button onClick={toggleList}>Click here to see the entire list of excuses</button>
-              {/* <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button> */}
+              <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button>
 
-              {/* <FilteredExcuseList setTag = {tag} allExcuses={excuses} /> */}
+              {tagList == true} ? (
+              <FilteredExcuseList setTag = {tag} allExcuses={excuses} />)
             </div>
 
           )}
