@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
-
-
 const Excuse = (props) => {
 
   const [excuse, setExcuse] = useState('')
@@ -21,11 +19,8 @@ const Excuse = (props) => {
     }
     getTag()
   }, [props.setTag])
-
-
   return (
     <h3 className="excuseText">{excuse}</h3>
   )
 }
-
 export default Excuse;

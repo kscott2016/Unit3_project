@@ -5,8 +5,6 @@ import { BASE_URL, ALL_EXCUSES_URL } from '../globals'
 const ExcuseList = (props) => {
 
     return (
-
-
         <div className="grid">
             {
                 props.allExcuses.map((excuse) => (
@@ -14,14 +12,10 @@ const ExcuseList = (props) => {
                     <div key={excuse.id} className="card">
                         <p className="excuseText">{excuse.Excuse}</p>
                         <p className="excuseType">Excuse type: <span>{excuse.Tag}</span></p>
-
                     </div>
-
                 ))
             }
         </div>
-
-
     )
 }
 
