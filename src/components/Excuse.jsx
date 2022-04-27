@@ -4,29 +4,28 @@ import { BASE_URL } from '../globals'
 
 
 
-// const Excuse = ({}) => {
-//   const [excuse, setExcuse] = useEffect('')
-
-
-  
-
-//   return (
-    
-//     <div key={excuse.id} className="card">
-//     <h2 style={{ fontStyle: 'italic' }}>{excuse!=='' && excuse}</h2>
-//     </div>
-    
-//   )
-// }
-
-// export default Excuse
-
-const Excuse = ({}) => {
+const Excuse = (props) => {
 
   const [excuse, setExcuse] = useState('')
 
+  useEffect(() => {
+    const getTag = async () =>{
 
-}
+      try{
+        const response = await axios.get(`${BASE_URL}/${props.setTag}`)
+        //console.log(response.data.Excuse)
+        setExcuse(response.data.Excuse)
+      }catch (err){
+        console.log(err);
+      }
+    }
+      getTag()
+    }, [props.setTag])
+  
 
+    return(
+      <h2>{excuse}</h2>
+    )
+  }
 
-export default Excuse
+export default Excuse;

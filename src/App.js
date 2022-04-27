@@ -1,17 +1,31 @@
 import './styles/App.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { BASE_URL, API_KEY } from './globals'
+import { BASE_URL, ALL_EXCUSES_URL } from './globals'
 import Excuse from './components/Excuse'
-
+import ExcuseList from './components/ExcuseList'
 
 const App = () => {
-  const [tag, setTag] = useState("")
+
+  const [excuses , setExcuses] = useState([]) 
+  const [tag, setTag] = useState(null)
+
 
   const handleSelect=(e)=>{
-    console.log(e.target.value);
+    //console.log(e.target.value);
     if(e.target.value) setTag(e.target.value)
+    
   }
+
+  useEffect(() => {
+    const getExcuses = async () => {
+      const response = await axios.get(`${ALL_EXCUSES_URL}`)
+      console.log(response.data)
+      setExcuses(response.data.Excuse)
+    }
+    getExcuses()
+  }, [])
+
 
   return (
     <div className="App">
@@ -38,11 +52,11 @@ const App = () => {
             <option value="email">Email</option>
             <option value="progress">Progress</option>
             <option value="starting">Starting</option>
-            <option value="disagreement">Disagreement</option>
+            
           </select>
         </label>
       </form> 
-        {/* <button onClick={toggleExcuses}>Escape Accountability!</button>  */}
+        {/* <button onClick={<ExcuseList tag ={tag}/>}>See an entire list of excuses to get that manager off your back!</button> */}
         </div>
         </div>
         <div className="image-container">
@@ -53,7 +67,15 @@ const App = () => {
           
           
          
-          <h3>You've selected {tag} </h3>
+          {/* <h3>You've selected {tag} </h3> */}
+          {/* <Excuse setTag = {tag}/> */}
+          {setTag ? (
+            <Excuse setTag = {tag}/>
+          ) : (
+
+            <ExcuseList allExcuses = {excuses} />
+            
+          )}
   
         </div>
         
