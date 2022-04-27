@@ -42,12 +42,13 @@ const App = () => {
       <div className="instructions-group">
         <div className="instructions-text">
         <header><h1>Excuses Generator</h1></header>
-        <h3>You want to be a lazy programmer? Need an excuse for work? Click on the button for an excuse!</h3>
+        <p>Work got you down? Don't feel like going to that meeting or you've been procrastinating on an assignment? Checkk out the list below of excuses!</p>
+        <p>Interested in a certain type of excuse? Select an excuse type from the menu</p>
         <div className="theButton">
 
-        <form >
+        <form className='excuseTypeMenu' >
         <label>
-          Select the type of excuse you would like
+         
           <select name="excuseSelect" id="excuseSelect" onChange={handleSelect}>
             <option value="">Select an excuse type</option>
             <option value="inspiration">Inspiration</option>
@@ -65,25 +66,26 @@ const App = () => {
           </select>
         </label>
       </form> 
-        <button onClick={toggleList}>See an entire list of excuses to get that manager off your back!</button>
+       
         </div>
         </div>
         <div className="image-container">
 
         </div>
         </div>
-        <div className="quote-container">
+        <div >
     
           {/* <Excuse setTag = {tag}/> */}
           {tag === false ? (
             <div>
-             <h3> FALSE </h3>
+             <h2 className='excuse-list-header'> Here's a handy list of excuses to escape accountability! </h2>
             <ExcuseList allExcuses = {excuses} />
             </div>
           ) : (
             <div>
               <h3> {`You've selected ${tag} type of an excuse`} </h3>
             <Excuse setTag = {tag}/>
+            <button onClick={toggleList}>Click here to see the entire list</button>
             
             </div>
             

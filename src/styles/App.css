@@ -71,6 +71,55 @@ button:active {
   text-shadow: 0 0 0.5em rgba(0, 151, 88, 0.253);
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 1em;
+  padding: 0.5em;
+}
+
+.card {
+  border-radius: 4px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #a3eaf9;
+}
+
+h2.excuse-list-header{
+  text-align: center;
+}
+
+form.excuseTypeMenu{
+  text-align: center;
+}
+
+#excuseSelect{
+  padding: 10px 20px;
+}
+
+select{
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 100% 50%;
+  
+  
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    appearance: none;
+    outline-width: 0;
+    font-size: 1em;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 10em;
+    border: none;
+    font-size: 1rem;
+    
+    border-bottom: 1px solid #757575;
+  }
+
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
