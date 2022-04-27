@@ -9,23 +9,23 @@ const Excuse = (props) => {
   const [excuse, setExcuse] = useState('')
 
   useEffect(() => {
-    const getTag = async () =>{
+    const getTag = async () => {
 
-      try{
+      try {
         const response = await axios.get(`${BASE_URL}/${props.setTag}`)
         //console.log(response.data.Excuse)
         setExcuse(response.data.Excuse)
-      }catch (err){
+      } catch (err) {
         console.log(err);
       }
     }
-      getTag()
-    }, [props.setTag])
-  
+    getTag()
+  }, [props.setTag])
 
-    return(
-      <h3 className="excuseText">{excuse}</h3>
-    )
-  }
+
+  return (
+    <h3 className="excuseText">{excuse}</h3>
+  )
+}
 
 export default Excuse;

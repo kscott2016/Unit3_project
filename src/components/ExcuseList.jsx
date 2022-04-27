@@ -4,7 +4,7 @@ import { BASE_URL, ALL_EXCUSES_URL } from '../globals'
 
 const ExcuseList = (props) => {
 
-      return(
+    return (
 
 
         <div className="grid">
@@ -14,7 +14,7 @@ const ExcuseList = (props) => {
                     <div key={excuse.id} className="card">
                         <p className="excuseText">{excuse.Excuse}</p>
                         <p className="excuseType">Excuse type: <span>{excuse.Tag}</span></p>
-                        
+
                     </div>
 
                 ))
@@ -22,7 +22,7 @@ const ExcuseList = (props) => {
         </div>
 
 
-        )
-  }
-  
-  export default ExcuseList
+    )
+}
+
+export default ExcuseList
