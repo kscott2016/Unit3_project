@@ -95,7 +95,7 @@ const App = () => {
               <h3 className='excuseType'> <u>{`You've selected a ${tag} type of excuse`}</u> </h3>
               <Excuse setTag={tag} />
               <button onClick={toggleList}>Click here to see the entire list of excuses</button>
-              <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button>
+              {/* <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button> */}
 
               {/* {tagList == true} ? ( */}
               {/* <FilteredExcuseList setTag = {tag} allExcuses={excuses} />) */}
