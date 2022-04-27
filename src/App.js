@@ -4,11 +4,13 @@ import axios from 'axios'
 import { BASE_URL, ALL_EXCUSES_URL } from './globals'
 import Excuse from './components/Excuse'
 import ExcuseList from './components/ExcuseList'
+import FilteredExcuseList from './components/FilteredExcuseList'
 
 const App = () => {
 
   const [excuses , setExcuses] = useState([]) 
   const [tag, setTag] = useState(false)
+  const [tagList, setTagList]= useState(false)
 
 
   const handleSelect=(e)=>{
@@ -22,6 +24,15 @@ const App = () => {
       setTag(false)
       ) : (
         setTag(true)
+      )
+    }
+  }
+
+  const toggleFilterList = () => {
+    {tagList ? (
+      setTagList(false)
+      ) : (
+        setTagList(true)
       )
     }
   }
@@ -48,7 +59,6 @@ const App = () => {
 
         <form className='excuseTypeMenu' >
         <label>
-         
           <select name="excuseSelect" id="excuseSelect" onChange={handleSelect}>
             <option value="">Select an excuse type</option>
             <option value="inspiration">Inspiration</option>
@@ -75,23 +85,29 @@ const App = () => {
         </div>
         <div >
     
-          {/* <Excuse setTag = {tag}/> */}
+      
+
+
+         
           {tag === false ? (
             <div>
              <h2 className='excuse-list-header'> Here's a handy list of excuses to escape accountability! </h2>
             <ExcuseList allExcuses = {excuses} />
             </div>
           ) : (
+
             <div className='content-container'>
               <h3 className='excuseType'> <u>{`You've selected a ${tag} type of excuse`}</u> </h3>
             <Excuse setTag = {tag}/>
             <button onClick={toggleList}>Click here to see the entire list of excuses</button>
-            
+            <button onClick={toggleFilterList}>{`Click here to see the entire list of ${tag} excuses`}</button>
             </div>
             
           )}
   
         </div>
+
+
         
       </main>
     </div>
